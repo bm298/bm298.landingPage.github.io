@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>tailwind Doc</title>
+<link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body onload="changeBorderCol1()">
+
+    <!-- Navbar -->
+    <nav class="relative container mx-auto px-12 py-6">
+        <!-- Flex Container -->
+        <div class="flex items-center justify-between ">
+            <!-- Logo -->
+            <div class="">
+                <img src="./public/logo-bookmark.svg"/>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="hidden md:flex space-x-14 items-center font-medium">
+                <a href="" class="hover:text-gray-400">FEATURES</a>
+                <a href="" class="hover:text-gray-400">PRICING</a>
+                <a href="" class="hover:text-gray-400">CONTACT</a>
+                <button class="bg-red-500 px-8 py-2 rounded text-white text-sm 
+                hover:bg-white hover:text-red-500 border-2 border-red-500">
+                    <a href="">LOG IN</a>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section>
+
+        <!-- Container -->
+        <div class="flex flex-col-reverse md:flex-row items-center justify-center mx-auto mt-12 px-12">
+
+            <!-- Left-item -->
+            <div class="">
+            <div class="flex flex-col items-center mx-auto space-y-8 md:items-start max-w-xl">
+                <h1 class="text-5xl font-bold text-center px-4 md:text-left md:px-0">
+                    A Simple Bookmark Manager
+                </h1>
+                <p class="text-slate-400 text-lg text-center md:text-left md:px-0">
+                    A clean and simple interface to organise your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free
+                </p>
+                <div class="">
+                    <button class="shadow-xl bg-blue-500 hover:bg-blue-800 px-6 py-2 rounded text-white text-sm mr-4">
+                        <a href="" class="font-medium">Get it on Chrome</a>
+                    </button>
+
+                    <button class="shadow-lg bg-slate-100 hover:bg-slate-300 px-6 py-2 rounded text-sm
+                    md:px-7 md:mt-4
+                    ">
+                        <a href="" class="font-medium">Get it on Firefox</a>
+                    </button>
+                </div>
+            
+            </div>
+            </div>
+
+            <!-- Right-item -->
+            <div class="">
+                <img class="w-[60%] mx-auto md:w-full" src="./public/illustration-hero.svg" />
+            </div>            
+
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <section id="Features">
+       <div class="mx-auto text-center px-12 mt-16 md:max-w-xl ">
+            <h1 class="font-semibold text-4xl mb-6 ">Features</h1>
+            <p class="text-slate-400 text-lg">
+            Our aim is to make it quick and easy for you to access your favourite websites. 
+            Your bookmarks sync between your devices so you can access them on the go
+            </p>
+        </div>
+    </section>    
+
+    <!-- Additional Features Section -->
+    <section>
+        <div id="tabContainer" class=" container flex flex-col mt-16 text-xl p-12 md:flex-row mx-auto max-w-4xl p-6">
+            <div data-tab1="tab1" class=" text-center md:w-1/3">
+                <div id="speedySearch" onclick="changeBorderCol1(event)" class="text-center pt-6 border-b-2 pb-6 cursor-pointer">
+                    <p>Speedy Searching</p>
+                </div>
+            </div>
+
+            <div class="text-center md:w-1/3">
+                <div id="simpleBookmarking" onclick="changeBorderCol2()" class="text-center pt-6 border-b-2 pb-6 cursor-pointer">
+                    <p>Simple Bookmarking</p>
+                </div>
+            </div>
+
+            <div class="text-center md:w-1/3">
+                <div id="easySharing" onclick="changeBorderCol3()" class="text-center pt-6 border-b-2 pb-6 cursor-pointer">
+                    <p>Easy Sharing</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="idBlock">
+
+            <div id="speedySearchShow" class="hidden animate-slideIn">
+                <div class="container flex flex-col md:flex-row items-center px-12 mx-auto mt-12">
+
+                    <!-- Left-item -->
+                    <div class="w-1/2">
+                        <img src="./public/illustration-features-tab-2.svg" class="mx-auto" />
+                    </div>           
+                            
+                    <!-- Right-item -->
+                    <div class="w-full md: w-1/2 max-w-lg">
+                        <div class="flex flex-col items-center space-y-8 md:items-start">
+                            <h1 class="text-5xl font-bold text-center md:text-left">Intelligent Search</h1>
+                            <p class="text-slate-400 text-lg text-center md:text-left">Our powerful search feauture will help you find saved sites in no time at all.
+                            No need to trawl through all of your bookmarks.
+                            </p>
+                            <div class="">
+                                <button class="shadow-xl bg-blue-500 hover:bg-blue-800 px-6 py-2 rounded text-white text-sm mr-4">
+                                    <a href="" class="font-medium">More Info</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="simpleBookmarkingShow" class="hidden animate-slideIn">
+                <div class="container flex flex-col md:flex-row items-center px-12 mx-auto mt-12">
+        
+                    <!-- Left-item -->
+                    <div class="w-1/2 opacity-100">
+                        <img src="./public/illustration-features-tab-1.svg" class="mx-auto" />
+                    </div>           
+                            
+                    <!-- Right-item -->
+                    <div class="w-full md: w-1/2 max-w-lg">
+                        <div class="flex flex-col items-center space-y-8 md:items-start">
+                            <h1 class="text-5xl font-bold text-center md:text-left">Bookmark in one click</h1>
+                            <p class="text-slate-400 text-lg text-center md:text-left">Organise your bookmarks however you like. Our simple drag-and-drop
+                                interface gives you complete control over how you manage your favourite sites.
+                            </p>
+                            <div class="">
+                                <button class="shadow-xl bg-blue-500 hover:bg-blue-800 px-6 py-2 rounded text-white text-sm mr-4">
+                                    <a href="" class="font-medium">More Info</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="easySharingShow" class="hidden animate-slideIn">
+
+                <div class="container flex flex-col md:flex-row items-center px-12 mx-auto mt-12">
+        
+                    <!-- Left-item -->
+                    <div class="w-1/2">
+                        <img src="./public/illustration-features-tab-3.svg" class="mx-auto" />
+                    </div>           
+                            
+                    <!-- Right-item -->
+                    <div class="w-full md: w-1/2 max-w-lg">
+                        <div class="flex flex-col items-center space-y-8 md:items-start">
+                            <h1 class="text-5xl font-bold text-center md:text-left">Share your bookmarks</h1>
+                            <p class="text-slate-400 text-lg text-center md:text-left">Easily share your bookmarks and collections
+                                with others. Create a shareable link that you can send at the click of a button
+                            </p>
+                            <div class="">
+                                <button class="shadow-xl bg-blue-500 hover:bg-blue-800 px-6 py-2 rounded text-white text-sm mr-4">
+                                    <a href="" class="font-medium">More Info</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Browser Blocks Section -->
+    <section>
+        <!-- Container for heading and browser blocks -->
+        <div class="max-w-xl md:max-w-6xl mx-auto mt-24">
+            <div class="mx-auto text-center p-12 md:max-w-xl">
+                <h1 class="font-semibold text-4xl mb-6">Download the extension</h1>
+                <p class="text-slate-400 text-lg">
+                    We've got more browswers in the pipeline. Please do let us know
+                    if you've got a favourite you'd ike us to prioritize.
+                </p>
+            </div>
+
+            <!-- Browser Card Area -->
+            <!-- <div class="flex flex-col md:flex-row mt-16"> -->
+                <div class="flex flex-col justify-center md:flex-row">
+                <!-- First Card Block -->
+                <!-- <div class=" w-full 2xl:w-1/3"> -->
+                    <div class="">
+                    <!-- <div class="shadow-xl rounded-2xl mx-auto flex flex-col items-center p-6 space-y-8 max-w-[50%]  lg:max-w-[100%] "> -->
+                    <div class="text-center shadow-xl rounded-2xl mx-auto py-6 space-y-8 max-w-xs my-10 md:mx-4 md:my-0">
+                        <img class="mx-auto" src="./public/logo-chrome.svg" />
+                        <p>Minimum version 62</p>
+                        <img class="mx-auto" src="./public/bg-dots.svg" />
+                        <button class="shadow-xl bg-blue-500 hover:bg-blue-800 px-6 py-2 rounded text-white text-sm">
+                            Add & Install Extension
+                        </button>
+                    </div>
+                </div>
+                <!-- Second Card Block -->
+                <!-- <div class="w-full 2xl:w-1/3 mt-6"> -->
+                    <div class="">
+                    <!-- <div class="shadow-xl rounded-2xl mx-auto flex flex-col items-center p-6 space-y-8 max-w-[50%]  lg:max-w-[100%] "> -->
+                    <div class="text-center shadow-xl rounded-2xl mx-auto py-6 space-y-8 max-w-xs my-10 md:mx-4 md:my-6">
+                        <img class="mx-auto" src="./public/logo-opera.svg" />
+                        <p>Minimum version 46</p>
+                        <img class="mx-auto" src="./public/bg-dots.svg" />
+                        <button class="shadow-xl bg-blue-500 hover:bg-blue-800 px-6 py-2 rounded text-white text-sm">
+                            Add & Install Extension
+                        </button>
+                    </div>
+                </div>
+                <!-- Third Card Block -->
+                <div class="">
+                    <div class="text-center shadow-xl rounded-2xl mx-auto py-6 space-y-8 max-w-xs my-10 md:mx-4 md:my-12">
+                        <img class="mx-auto" src="./public/logo-firefox.svg" />
+                        <p>Minimum version 55</p>
+                        <img class="mx-auto" src="./public/bg-dots.svg" />
+                        <button class="shadow-xl bg-blue-500 hover:bg-blue-800 px-6 py-2 rounded text-white text-sm">
+                            Add & Install Extension
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- FAQs Section -->
+    <section id="FAQs" class="p-12 md:mb-24">
+        <div class="mx-auto text-center mt-24 max-w-lg">
+             <h1 class="font-semibold text-4xl mb-6">Frequently Asked Questions</h1>
+             <p class="text-slate-400 text-lg">
+                Here are some of our FAQs. If you have any other questions
+                you'd like answered please feel free to email us. 
+             </p>
+         </div>
+
+         <!-- First Faq -->
+         <div class="my-12 mx-auto max-w-lg">
+            <div>
+                <div class="flex justify-between py-6 border-t-2 border-slate-200">
+                    <p>What is Bookmark? </p>
+                    <img onclick="myFunction1()" src="./public/icon-arrow.svg" class="pr-4 object-contain hover:cursor-pointer"  />
+                </div>
+                <p id="show1" class="hidden mb-6 text-sm text-slate-400 ">Bookmark is a service that provides browser support through extensions</p>
+            </div>
+
+            <!-- Second Faq -->
+            <div>
+                <div class="flex justify-between py-6 border-t-2 border-slate-200">
+                    <p>How can I request a new browser? </p>
+                    <img onclick="myFunction2()" src="./public/icon-arrow.svg" class="pr-4 object-contain hover:cursor-pointer"  />
+                </div>
+                <p id="show2" class="hidden mb-6 text-sm text-slate-400 ">You can request a new browser by contacting our customer service department. </p>
+            </div>
+
+            <!-- Third Faq -->
+            <div>
+                <div class="flex justify-between py-6 border-t-2 border-slate-200">
+                    <p>Is there a mobile app? </p>
+                    <img onclick="myFunction3()" src="./public/icon-arrow.svg" class="pr-4 object-contain hover:cursor-pointer"  />
+                </div>
+                <p id="show3" class="hidden mb-6 text-sm text-slate-400 ">Yes, there is a mobile app that you can either download from the Android Playstore or the Apple App Store </p>
+            </div>
+
+            <!-- Fourth Faq -->
+            <div>
+                <div class="flex justify-between py-6 border-t-2 border-slate-200">
+                    <p>What about other Chromium browsers?</p>
+                    <img onclick="myFunction4()" src="./public/icon-arrow.svg" class="pr-4 object-contain hover:cursor-pointer"  />
+                </div>
+                <p id="show4" class="hidden mb-6 text-sm text-slate-400">We are updating and adding new browsers weekly so keep checking back to see if your browser has been added!</p>
+            </div>
+
+            <!-- Empty Faq Border Bottom Line -->
+            <div class="flex justify-between py-6 border-t-2 border-slate-200">
+            </div>
+            
+         <!-- Button -->
+         <div class="flex justify-center">
+            <button class="shadow-xl bg-blue-500 hover:bg-blue-800 px-8 py-2 rounded text-white text-sm">
+                <a href="">More Info</a>
+            </button>
+         </div>
+     </section> 
+     
+     <!-- Purple Bg section -->
+     <section id="purpleFill">
+        <div class="bg-blue-500 p-20">
+            <div class="mx-auto max-w-lg text-center ">
+                <p class="text-white tracking-widest pb-10" >35,000+ ALREADY JOINED</p>
+                <h1 class="text-white font-semibold text-3xl pb-10">Stay up-to-date with what we're doing</h1>
+            </div>
+            <div class="flex flex-col items-center text-center gap-6 mx-auto max-w-lg md:flex-row gap-2">
+                <input class="h-12 w-full rounded px-3 outline-gray-100 md:w-4/5" 
+                placeholder="Enter Your Email Address"
+                />
+                <button class=" bg-red-500 w-full rounded text-white text-sm mt-4 p-2 md:w-1/5 h-12 mt-0 hover:bg-red-700">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+     </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-sm">
+        <div class="relative container mx-auto px-12 py-6 text-gray-50 ">
+        <!-- Footer Flex Container -->
+            <div class="flex items-center">
+                <!-- Logo -->
+                <div class="bg-white">
+                    <img src="./public/logo-bookmark.svg" />
+                </div>
+
+                <!-- Footer Links -->
+                <div class="hidden md:flex ml-12 space-x-14">
+                    <a href="" class="hover:text-gray-400">FEATURES</a>
+                    <a href="" class="hover:text-gray-400">PRICING</a>
+                    <a href="" class="hover:text-gray-400">CONTACT</a>
+                </div>
+
+                <!-- Footer Icons -->
+                <div class="w-full flex justify-end gap-7">
+                    <img src="./public/icon-facebook.svg"/>
+                    <img src="./public/icon-twitter.svg"/>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    let borderCol1Clicked= false
+    let borderCol2Clicked= false
+    let borderCol3Clicked= false
+        
+        function changeBorderCol1(){
+            if (borderCol1Clicked===false){
+                let list= document.querySelectorAll("#speedySearch");
+                list[0].style.borderBottom = "solid 2px red";
+
+                let divShow= document.querySelectorAll("#speedySearchShow");
+                divShow[0].style.display="flex"
+                
+                
+                borderCol1Clicked= true
+                borderCol2Clicked=true
+                changeBorderCol2()
+                borderCol3Clicked=true
+                changeBorderCol3()
+
+            }
+            else{
+                let list= document.querySelectorAll("#speedySearch");
+                list[0].style.borderBottom = " solid 2px #e5e7eb";
+
+                let divShow= document.querySelectorAll("#speedySearchShow");
+                divShow[0].style.display="none"
+
+                borderCol1Clicked= false
+            }
+        }
+
+        function changeBorderCol2(){
+            if (borderCol2Clicked===false){
+                let list= document.querySelectorAll("#simpleBookmarking");
+                list[0].style.borderBottom = "solid 2px red";
+
+                let divShow= document.querySelectorAll("#simpleBookmarkingShow");
+                divShow[0].style.display="block"
+
+                borderCol2Clicked= true
+                borderCol1Clicked=true
+                changeBorderCol1()
+                borderCol3Clicked=true
+                changeBorderCol3()
+            }
+            else{
+                let list= document.querySelectorAll("#simpleBookmarking");
+                list[0].style.borderBottom = " solid 2px #e5e7eb";
+
+                let divShow= document.querySelectorAll("#simpleBookmarkingShow");
+                divShow[0].style.display="none"
+
+                borderCol2Clicked= false
+            }
+        }
+
+        function changeBorderCol3(){
+            if (borderCol3Clicked===false){
+                let list= document.querySelectorAll("#easySharing");
+                list[0].style.borderBottom = "solid 2px red";
+                
+                let divShow= document.querySelectorAll("#easySharingShow");
+                divShow[0].style.display="block"
+                
+                borderCol3Clicked= true
+                borderCol1Clicked=true
+                changeBorderCol1()
+                borderCol2Clicked=true
+                changeBorderCol2()
+            }
+            else{
+                let list= document.querySelectorAll("#easySharing");
+                list[0].style.borderBottom = " solid 2px #e5e7eb";
+
+                let divShow= document.querySelectorAll("#easySharingShow");
+                divShow[0].style.display="none"
+
+                borderCol3Clicked= false
+            }
+        }
+
+        let show1Clicked= false
+        let show2Clicked= false
+        let show3Clicked= false
+        let show4Clicked= false
+        
+        function myFunction1() {
+        if (show1Clicked===false){
+          let nodeList= document.querySelectorAll("p#show1");
+          show1Clicked= true;
+          nodeList[0].style.display = "flex";
+          }
+          else{
+          let nodeList= document.querySelectorAll("p#show1");
+          show1Clicked= false;
+          nodeList[0].style.display = "none";
+          }
+        }
+
+        function myFunction2() {
+        if (show2Clicked===false){
+          let nodeList= document.querySelectorAll("p#show2");
+          show2Clicked= true;
+          nodeList[0].style.display = "flex";
+          }
+          else{
+          let nodeList= document.querySelectorAll("p#show2");
+          show2Clicked= false;
+          nodeList[0].style.display = "none";
+          }
+        }
+
+        function myFunction3() {
+        if (show3Clicked===false){
+          let nodeList= document.querySelectorAll("p#show3");
+          show3Clicked= true;
+          nodeList[0].style.display = "flex";
+          }
+          else{
+          let nodeList= document.querySelectorAll("p#show3");
+          show3Clicked= false;
+          nodeList[0].style.display = "none";
+          }
+        }
+
+        function myFunction4() {
+        if (show4Clicked===false){
+          let nodeList= document.querySelectorAll("p#show4");
+          show4Clicked= true;
+          nodeList[0].style.display = "flex";
+          }
+          else{
+          let nodeList= document.querySelectorAll("p#show4");
+          show4Clicked= false;
+          nodeList[0].style.display = "none";
+          }
+        }
+
+
+    </script>
+
+<script src="index.js">
+
+</script>    
+
+</body>
+
+
+
+
+</html>
